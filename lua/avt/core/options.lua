@@ -1,4 +1,4 @@
-local opt = vim.opt  -- for conciseness
+local opt = vim.opt -- for conciseness
 
 -- line numbers
 opt.relativenumber = true
@@ -39,4 +39,5 @@ opt.splitbelow = true
 opt.iskeyword:append("-")
 
 -- leader timeout
-opt.timeoutlen = 5000
+opt.timeoutlen = 1000
+opt.ttimeoutlen = 5

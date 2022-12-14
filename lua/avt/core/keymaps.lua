@@ -4,13 +4,10 @@ local keymap = vim.keymap -- for conciseness
 
 -- general keymaps
 keymap.set("n", "<leader>km", ":e ~/.config/nvim/lua/avt/core/keymaps.lua<CR>") -- open this file
+keymap.set("n", "<leader>w", ":write<CR>") -- close current split window
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear search highlight
 keymap.set("n", "x", '"_x') -- delete char, yank in null register
-
--- increment/decrement numbers
--- keymap.set("n", "<leader>+", "<C-a>") -- increment
--- keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -28,6 +25,29 @@ keymap.set("n", "<leader>bn", ":bn<CR>") -- buffer next
 keymap.set("n", "<leader>bp", ":bp<CR>") -- buffer previous
 keymap.set("n", "<leader>bd", ":bd<CR>") -- buffer delete
 keymap.set("n", "<leader>bm", ":bm<CR>") -- buffer modified
+
+-- reminder
+-- Ctrl-w [number] + : increase height
+-- Ctrl-w [number] - : decrease height
+-- Ctrl-w [number] > : increase height
+-- Ctrl-w [number] < : decrease width
+
+-- reminder in insert node
+-- i C-u undo
+-- i C-w delete previous word
+-- i C-h delete previous char
+-- i C-r insert content of register
+
+keymap.set("i", "<C-x>", "<C-o>x")
+keymap.set("i", "<A-h>", "<C-o>h")
+keymap.set("i", "<A-j>", "<C-o>j")
+keymap.set("i", "<A-k>", "<C-o>k")
+keymap.set("i", "<A-l>", "<C-o>l")
+keymap.set("i", "<A-w>", "<C-o>w")
+keymap.set("i", "<A-e>", "<C-o>e")
+keymap.set("i", "<A-b>", "<C-o>b")
+keymap.set("i", "<A-i>", "<C-o>^")
+keymap.set("i", "<A-a>", "<C-o>$")
 
 ----------------------
 -- Plugin Keybinds
